@@ -1,0 +1,25 @@
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <lable> Nome:</label><br>
+    <input type="text" name="nome" value="{{ dog.title }}"/>
+  </div>
+
+  <div>
+    <lable>Raça:</lable><br>
+    <input type="text" name="raça" value="{{ dog.raca }}"/>
+  </div>
+
+  <div>
+    <lable>Idade:</lable><br>
+    <input type="text" name="idade" value="{{ dog.idade }}"/>
+  </div>
+
+  <div>
+    <lable>Adoção:</lable><br>
+    <input type="date" name="adoção" value="{{ dog.adocao }}"/><br>
+  </div>
+  
+  <input type="submit"/>
+  
+</form>

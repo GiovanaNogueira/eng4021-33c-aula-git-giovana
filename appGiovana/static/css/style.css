@@ -1,0 +1,35 @@
+h1{
+  font-family: 'Zeyada', cursive;
+  color: #0b8e83;
+  text-align: center;
+  border:dashed;
+}
+
+h2{
+  font-family: 'Zeyada', cursive;
+  color: #0b8e83;
+  text-decoration: underline;
+  
+}
+
+body{
+  font-family: 'Barlow Condensed', sans-serif;
+  background-color: oldlace;
+}
+
+ul{
+  list-style-type: square;
+ color: #0b8e83;
+}
+
+ol{
+  color:#0b8e83;
+}
+
+th{
+  background-color: #0b8e83;
+}
+
+table{
+  border-color: #0b8e83;
+}

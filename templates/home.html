@@ -1,0 +1,95 @@
+{% load static %}
+
+<html>
+  <head>
+    <title> Minha Vida </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  </head>
+
+  <body>
+    <h1> Giovana Martins Nogueira </h1>
+    
+    <h2>Minha Vida</h2>
+    
+    <p> Tenho 23 anos. Estou cursando o 2º período de engenharia de controle e automação, que é a terceira faculdade que inicio e espero que seja a última também. Sou irmã caçula entre 3 mulheres. Para me conhecer mais, esse é o  <a href="https://www.instagram.com/gigmnogueira/" target="blank">meu perfil no instagram</a>. Sou atleta de <u> futsal e handebol</u> nas horas vagas, além de tocar piano e violão como hobbie preferido. Tenho 3 cachorros, que, juntos com o meu namorado, são <b>os amores da minha vida:</p>
+    </b>
+      <ul>
+        {% for dog in dog %}
+        <li>
+          {{ dog.title }}
+          <a href="/dogs/edit/{{dog.id}}">Editar</a>
+          <a href="/dogs/delete/{{dog.id}}">Remover</a>
+        </li>
+        {{ dog.raca }}
+        <br>
+        {{ dog.idade }}
+        <br>
+        {{ dog.adoção }}
+        {% endfor %}
+      </ul>
+    <img width='200'src='https://uploaddeimagens.com.br/images/004/410/196/full/IMG_0351.jpg?1680037746'/>
+    <img width='200' src='https://uploaddeimagens.com.br/images/004/410/195/full/IMG_6202.jpg?1680037660'/>
+    <br>
+
+    <p> Amo atividades ao ar livre e algumas das minhas metas de vida são:</p>
+    <ol>
+      {% for meta in meta %}
+      <li>
+        {{ meta.title }}  
+        <a href="/metas/edit/{{meta.id}}">Editar</a>
+        <a href="/metas/delete/{{meta.id}}">Remover</a> 
+      </li>
+      {{meta.description}}
+      <br>
+      {{meta.place}}
+      <br>
+      {% endfor %}
+    </ol>
+    
+    <p> A tabela a seguir ilustra as faculdades que eu já comecei a cursar ao longo dos anos:</p>
+    <table border="1" width="50%" cellpadding="10">
+      <tr>
+        <th>Curso</th>
+        <th>Faculdade</th>
+        <th>Duração</th>
+      </tr>
+          
+      <tr>
+        <td>Nanotecnologia</td>
+        <td>UFRJ</td>
+        <td>2018.1 - 2018.2</td>
+      </tr>
+    
+      <tr>
+        <td>Medicina</td>
+        <td>Souza Marques</td>
+        <td>2019 - 2022</td>
+      </tr>
+    
+      <tr>
+        <td>Eng. Controle e Automação</td>
+        <td>PUC-Rio</td>
+        <td>2022.2 - (atual) </td>
+      </tr>
+    </table>
+  
+  </body>
+</html>

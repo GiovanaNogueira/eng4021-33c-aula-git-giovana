@@ -1,0 +1,27 @@
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <lable> Meta:</label><br>
+    <input type="text" name="titulo"  value = "{{meta.title}}"/>
+  </div>
+
+  <div>
+    <lable>Descrição:</lable><br>
+    <textarea name="descrição">
+      {{ meta.description }}
+    </textarea>
+  </div>
+
+  <div>
+    <lable>Lugar:</lable><br>
+    <input type="text" name="lugar" value="{{ meta.place }}"/>
+  </div>
+
+  <div>
+    <input type="checkbox" name="feito" {% if meta.done == True %} checked {% endif %}/>
+    <lable>Feito</lable><br>
+  </div>
+  
+  <input type="submit"/>
+  
+</form>
